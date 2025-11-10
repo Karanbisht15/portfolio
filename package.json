@@ -1,14 +1,16 @@
 {
-  "name": "portfolio-website",
+  "name": "Devloper-Portfolio-main",
   "version": "1.0.0",
+  "description": "Developer portfolio static site",
+  "private": true,
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx serve .",
+    "dev": "npx serve .",
+    "build": "echo \"No build step defined\""
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "vite": "^5.0.11"
-  }
+  "license": "MIT",
+  "dependencies": {}
 }

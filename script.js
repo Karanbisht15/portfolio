@@ -92,3 +92,82 @@ function highlightNavLink() {
 }
 
 window.addEventListener('scroll', highlightNavLink);
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+})();
+
+// Contact form submission handler
+async function sendEmail(e) {
+    e.preventDefault();
+
+    // Get the form elements
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('span');
+    const originalText = btnText.textContent;
+
+    try {
+        // Disable the submit button and change text while sending
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending...';
+        
+        // Use fetch to submit the form data to your preferred service
+        // For example, using Formspree (you'll need to replace the URL with your form endpoint)
+        const response = await fetch('https://formspree.io/f/your-form-id', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Success message
+            form.reset();
+            showMessage('Thank you! Your message has been sent successfully.', 'success');
+        } else {
+            // Error message
+            throw new Error('Failed to send message');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        showMessage('Sorry, there was a problem sending your message. Please try again later.', 'error');
+    } finally {
+        // Re-enable the submit button and restore original text
+        submitBtn.disabled = false;
+        btnText.textContent = originalText;
+    }
+
+    return false;
+}
+
+// Function to show status messages
+function showMessage(message, type) {
+    // Remove any existing message
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
+    // Create new message element
+    const messageElement = document.createElement('div');
+    messageElement.className = `form-message ${type}`;
+    messageElement.textContent = message;
+
+    // Add the message to the form
+    const form = document.getElementById('contactForm');
+    form.insertAdjacentElement('beforeend', messageElement);
+
+    // Remove the message after 5 seconds
+    setTimeout(() => {
+        messageElement.remove();
+    }, 5000);
+}
+
+// Add loading animation when sending
+document.getElementById('contactForm').addEventListener('submit', function() {
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.classList.add('sending');
+});
