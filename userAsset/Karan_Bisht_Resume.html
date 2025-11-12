@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Karan Bisht — Resume</title>
+  <style>
+    :root{--accent:#8a2be2;--muted:#6b6b6b}
+    body{font-family: Inter, Roboto, Arial, sans-serif; color:#111; margin:0; padding:32px; background:#fff}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    h1{margin:0;font-size:28px}
+    .title{color:var(--accent);font-weight:700}
+    .contact{font-size:14px;color:var(--muted)}
+    section{margin-top:22px}
+    .section-title{font-weight:700;color:var(--accent);margin-bottom:8px}
+    .two-col{display:flex;gap:32px}
+    .left{flex:1}
+    .right{width:260px}
+    .card{padding:12px;border-radius:8px}
+    .list{margin:0;padding:0;list-style:none}
+    .job{margin-bottom:12px}
+    .job h3{margin:0;font-size:16px}
+    .job .meta{font-size:13px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f3f3f3;padding:6px 8px;border-radius:6px;font-size:13px}
+    /* print friendly */
+    @media print{
+      body{padding:8mm}
+      .right{width:230px}
+      a{color:#000}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Karan Bisht</h1>
+        <div class="title">Full Stack Developer</div>
+        <div style="height:8px"></div>
+        <div class="contact">
+          Email: <a href="mailto:karanbisht8864@gmail.com">karanbisht8864@gmail.com</a> &nbsp;•&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/karan-bisht-694a772b9/" target="_blank">karan-bisht</a> &nbsp;•&nbsp; GitHub: <a href="https://github.com/Karanbisht15" target="_blank">Karanbisht15</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="card">
+          <strong>Location</strong>
+          <div class="meta" style="margin-bottom:8px">(Add city / country)</div>
+
+          <strong>Education</strong>
+          <div class="meta">Pursuing MCA — Lovely Professional University</div>
+          <div style="height:8px"></div>
+          <div class="meta">BCA — Soban Singh Jeena University, Almora</div>
+          <div style="height:8px"></div>
+
+          <strong>Languages</strong>
+          <div class="meta">English, (add others)</div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Summary</div>
+      <p>Motivated Full Stack Developer with strong foundations in web technologies (HTML, CSS, JavaScript) and experience with React, Next.js and backend technologies. Passionate about building user-focused products and learning new tools and frameworks. Currently pursuing a Master’s in Computer Science.</p>
+    </section>
+
+    <section class="two-col">
+      <div class="left">
+        <div>
+          <div class="section-title">Experience</div>
+
+          <p>No professional experience or internships yet. Actively building personal projects and learning new technologies.</p>
+
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="section-title">Projects</div>
+          <ul class="list">
+            <li><strong>Discord Clone</strong> — Frontend replica built with React &amp; Tailwind</li>
+            <li><strong>Password Generator</strong> — JS utility with customizable options</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="section-title">Education</div>
+          <div class="meta">Add degree details, GPA (optional), relevant coursework or honors</div>
+        </div>
+
+      </div>
+
+      <aside class="right">
+        <div class="card">
+          <div class="section-title">Skills</div>
+          <div class="skills" style="margin-top:8px">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Next.js</div>
+            <div class="skill">Node.js / Express</div>
+            <div class="skill">Python</div>
+            <div class="skill">Git</div>
+            <div class="skill">Vercel</div>
+          </div>
+
+          <div style="height:12px"></div>
+          <div class="section-title">Contact</div>
+          <div class="meta">Email: karanbisht8864@gmail.com</div>
+          <div style="height:8px"></div>
+          <div class="section-title">Links</div>
+          <div class="meta"><a href="https://github.com/Karanbisht15" target="_blank">GitHub</a></div>
+          <div class="meta"><a href="https://www.linkedin.com/in/karan-bisht-694a772b9/" target="_blank">LinkedIn</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer style="margin-top:26px;font-size:13px;color:var(--muted)">Generated resume — please review and edit personal details. Print to PDF from your browser (File → Print → Save as PDF) for a downloadable PDF.</footer>
+  </div>
+</body>
+</html>
